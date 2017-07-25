@@ -1,0 +1,8 @@
+dev-landingRegistrosBr.iml
+/dist
+/vendor
+/node_modules
+view
+assets
+public
+.idea

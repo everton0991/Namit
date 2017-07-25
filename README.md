@@ -1,2 +1,1 @@
-# Namit
-Busca de dominios disponiveis 
+"#Verifica a disponibilidade de varios dominios simultaneamente." 
