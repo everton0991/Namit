@@ -1,0 +1,23 @@
+@import "../_partials/loading";
+@import "../_partials/ads";
+@import "../_partials/buttons";
+@import "../_partials/form";
+@import "../_partials/fineUploader";
+
+html {
+  overflow: hidden;
+  &.OverflowY {
+    overflow-y: auto;
+    will-change: scroll-position;
+  }
+}
+
+
+
+
+
+
+
+
+
+

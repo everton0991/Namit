@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@import "../_partials/globalVariables";
+
+.Ads {
+	align-items: center;
+	background-color: $mercury;
+	display: flex;
+	height: 136px;
+	width: 100%;
+	
+	.container {
+		&:before {
+			content: 'PUBLICIDADE';
+			color: $boulder;
+			display: inline-block;
+			font-size: 8px;
+			font-family: 'Open Sans', sans-serif;;
+			font-weight: 400;
+			line-height: normal;
+		}
+	}
+}

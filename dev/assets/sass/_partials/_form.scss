@@ -1,0 +1,130 @@
+@charset "UTF-8";
+@import "../_partials/validateFields";
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    min-height: 0;
+  }
+  to {
+    opacity: 1;
+    min-height: 0;
+    margin: 20px 0;
+  }
+}
+
+.Form {
+  display: block;
+  position: relative;
+  width: 100%;
+
+  form {
+    align-items: center;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.New {
+  display: block;
+}
+
+.Form-InputText {
+  display: block;
+  margin-bottom: 50px;
+  position: relative;
+  transition: ease-in-out .3s;
+  width: 100%;
+
+  @include media-query(sm) {
+    width: 497px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  input[type=text] {
+    border-bottom: 1px solid $mercury;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    color: $tundora;
+    display: block;
+    font-size: 20px;
+    padding: 10px 14px;
+    width: 100%;
+
+    @include media-query(sm) {
+      font-size: 25px;
+      padding: 8px 14px;
+    }
+
+    &:hover {
+      box-shadow: $mercury 0px 2px 15px 2px;
+      border: 1px solid $mercury;
+      border-radius: 3px;
+    }
+  }
+
+  .Form-InputText-FormatDomain {
+    background: lighten($tundora, 65%);
+    color: $tundora;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    position: absolute;
+    padding: 12px;
+    right: 0;
+    top: 0;
+  }
+
+  ::-webkit-input-placeholder {
+    color: darken($mercury, 10%);
+    text-overflow: ellipsis;
+  }
+  :-moz-placeholder {
+    color: darken($mercury, 10%) !important;
+    text-overflow: ellipsis;
+  }
+  ::-moz-placeholder {
+    color: darken($mercury, 10%) !important;
+    text-overflow: ellipsis;
+  }
+  :-ms-input-placeholder {
+    color: darken($mercury, 10%) !important;
+    text-overflow: ellipsis;
+  }
+}
+
+.Form-Actions {
+  display: block;
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+
+  .Button {
+    margin: 0 0 15px 0;
+    width: 100%;
+
+    @include media-query(sm) {
+      &:first-of-type {
+        margin-bottom: 0;
+        padding: 15px 0;
+        width: 150px;
+      }
+      &.ButtonDownload, &.ButtonResearch {
+        margin: 0 10px;
+        width: 230px;
+      }
+    }
+  }
+}
+
+
+
+
+

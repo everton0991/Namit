@@ -1,0 +1,139 @@
+@charset "UTF-8";
+@import "../_partials/commonFunctions";
+
+.Button {
+	color: $azureRadiance;
+	display: inline-block;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	padding: 11px 20px;
+	text-align: center;
+	text-decoration: none;
+	transition: ease-in-out .2s;
+	
+	&:hover {
+		color: $tundora;
+	}
+	
+	&.ButtonDoubt {
+		display: block;
+		margin: 0 auto;
+		padding-right: 27px;
+		width: 210px;
+	}
+	
+	&.GhostButton {
+		border: 1px solid $azureRadiance;
+		background: white;
+		font-size: 14px;
+		
+		&:after {
+			display: none;
+		}
+		
+		&:hover {
+			background: $azureRadiance;
+			color: white;
+		}
+		
+		&.GhostButton-Inverted {
+			border: 1px solid white;
+			background: $azureRadiance;
+			color: white;
+			
+			&:hover {
+				background: white;
+				border: 1px solid $azureRadiance;
+				color: $azureRadiance;
+			}
+		}
+		
+		&.AddMoreFields {
+			align-items: center;
+			border-radius: 90px;
+			font-weight: bold;
+			font-size: 20px;
+			justify-content: center;
+			display: flex;
+			padding: 0;
+			height: 30px;
+			width: 30px;
+			right: -48px;
+			position: absolute;
+			top: 0;
+			margin: 10px;
+		}
+	}
+	
+	&.AddNewField {
+		align-items: center;
+		border-radius: 90px;
+		display: flex;
+		justify-content: center;
+		height: 35px;
+		margin-top: 50px;
+		padding: 0;
+		width: 35px;
+	}
+	
+	i {
+		vertical-align: middle;
+	}
+}
+
+.Button-RemoveItem {
+	color: lighten($tundora, 35%);
+	position: absolute;
+	right: 0;
+	top: 50px;
+	transition: ease-in-out .3s;
+	
+	@include  media-query(sm){
+		right: -40px;
+		top: 12px;
+	}
+	
+	&:hover {
+		color: crimson;
+	}
+}
+
+.Choose {
+	.Choose-Actions {
+		align-items: center;
+		display: flex;
+		position: relative;
+	}
+	.Choose-ButtonInfo {
+		position: absolute;
+		right: auto;
+		top: 55px;
+		left: 0;
+		
+		@include media-query(sm) {
+			right: -25px;
+			top: 15px;
+			left: auto;
+		}
+	}
+	
+	#uploader {
+		.qq-upload-button-selector {
+			div {
+				font-size: 14px;
+				font-family: Arial, sans-serif;
+			}
+			&.qq-upload-button {
+				@extend .Button;
+				@extend .GhostButton;
+				padding: 11px 12px;
+				text-transform: uppercase;
+				width: 260px;
+				
+				&:hover {
+					color: white
+				}
+			}
+		}
+	}
+}
